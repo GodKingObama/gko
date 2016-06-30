@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style> 
+Body {
+
+color: antiquewhite;
+background-color: orange ;
+background-image: url(http://48e3l649yici2j96jp36bhdx.wpengine.netdna-cdn.com/ancestry/files/2014/09/Brickwall.jpg), url(http://republicbuzz.com/wp-content/uploads/2015/08/20150826/129720_DonaldTrumpPoints.jpg);
+    background-position: right , left;
+
+        }
+       .button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 50px;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+        h1  { color: white; text-align: center; font:60px Georgia; }
+        #gko {color: white; text-align: center; font: 16px Georgia;}
+
+        .warning{ color:yellowgreen;}
+        
+        .desc {color:navajowhite;}
+        .intro {background-color: bisque; }
+        ul em { color:yellow}
+        //*    li.special { color:orange;}
+             p { 
+             font: 60px Sans-Serif;
+                color: black;
+                  background-color:red;
+                    background-image: url("http://s3.envato.com/files/266645.jpg");
+               }/*Row has to add to 12*/
+
+        https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js
+
+    </style>
+
+     <title>Build a wall</title>
+     <h1> Donald Trump Speech Generator </h1> 
+
+     <script>
+    
+window.onload = loadPage;
+
+var myW = new Array("images/dog.jpg","images/fox.jpg","images/mouse.jpg","images/alligator.jpg","images/fish.jpg",
+                      "images/parrot.jpg","cat.jpg");
+var myMusic = new Array("music/Hey_Jude.mp3","music/All_My_Loving.mp3","music/I_Want_To_Hold_Your_Hand.mp3",
+                        "music/In_My_Life.mp3","music/Let_It_Be.mp3","music/Norwegian_Wood.mp3",
+                        "music/Yellow_Submarine.mp3","music/Yesterday.mp3");
+var myMusic2 = new Array("music/Hey_Jude.mp3","music/All_My_Loving.mp3","music/I_Want_To_Hold_Your_Hand.mp3",
+                        "music/In_My_Life.mp3","music/Let_It_Be.mp3","music/Norwegian_Wood.mp3",
+                        "music/Yellow_Submarine.mp3","music/Yesterday.mp3");
+var myMusic3 = new Array("music/Hey_Jude.mp3","music/All_My_Loving.mp3","music/I_Want_To_Hold_Your_Hand.mp3",
+                        "music/In_My_Life.mp3","music/Let_It_Be.mp3","music/Norwegian_Wood.mp3",
+                        "music/Yellow_Submarine.mp3","music/Yesterday.mp3");
+function loadPage() {
+     var audioElement = document.getElementById("myAudio");
+     audioElement.controls = false;
+//     audioElement.autoplay = false;
+     choosePic();
+     playMusic();
+}
+function choosePic() {
+     var randomNum = Math.floor(Math.random() * myPix.length);
+     document.getElementById("myPicture").src = myPix[randomNum];
+}
+
+function playMusic() {
+     var audioElement = document.getElementById("myAudio");
+     var i = Math.floor(Math.random()*myMusic.length);
+     audioElement.src = myMusic[i];
+     audioElement.autoplay = true;    
+     audioElement.load();
+     audioElement.onended = function() {
+        alert("The audio has ended. press to continue....");
+        choosePic();
+        playMusic();
+     };
+}
+
+function clickImage() {
+   alert ("You have to go back");
+}
+
+</script>
+
+
+<button class=button type="button" onclick=playMusic()>Listen</button>
+
+ 
+</head>
+<body>
+     <img src="" id="myPicture" width=400 alt="some image" onclick="clickImage()">
+     
+     <audio id="myAudio" controls=false>
+     <source src="music/yesterday.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<div id="myPlayingMusicTitle">
+
+</div>
+
+
+
+</body>
+</html>
