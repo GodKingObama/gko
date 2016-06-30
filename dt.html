@@ -13,25 +13,27 @@ background-image: url(http://www.clipartbest.com/cliparts/xcg/o5e/xcgo5e57i.jpeg
   display: inline-block;
   padding: 15px 25px;
   font-size: 50px;
-  width: 300px;
-  height: 300px;
+  width: 402px;
+  height: 402px;
   cursor: pointer;
   text-align: center;
   align-self: center;
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: orange;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {background-color: #ee7600}
 
 .button:active {
-  background-color: #3e8e41;
+  background-image: url(http://s3.amazonaws.com/rapgenius/Donald-Trump-9511238-1-402.jpg);
+   max-width: 402px;
+  max-height: px;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -100,16 +102,16 @@ function playMusic() {
 function clickImage() {
    alert ("You have to go back");
 }
+    //img src="" id="myPicture" width=400 alt="some image" onclick="clickImage()">goes above audio id my audio
 
 </script>
 
-
+<div style="text-align:center;">
 <button class=button type="button" onclick=playMusic()>Listen</button>
 
- 
+</div>
 </head>
 <body>
-     <img src="" id="myPicture" width=400 alt="some image" onclick="clickImage()">
      
      <audio id="myAudio" controls=false>
      <source src="music/yesterday.mp3" type="audio/mpeg">
@@ -118,8 +120,5 @@ function clickImage() {
 <div id="myPlayingMusicTitle">
 
 </div>
-
-
-
 </body>
 </html>
